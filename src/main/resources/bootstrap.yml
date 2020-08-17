@@ -1,0 +1,19 @@
+management:
+  endpoint:
+    env:
+      enabled: true
+    refresh:      enabled: true
+  endpoints:    web:      exposure:        include: "*"
+       
+spring:
+  profiles:
+    active: dev
+  application:    name: client-config
+  cloud:
+    config:
+      uri: http://localhost:8888
+      username: haxor
+      password: haxor
+      fail-fast: true
+      #request-connect-timeout: 10000
+      #request-read-timeout: 10000 
